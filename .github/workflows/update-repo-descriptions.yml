@@ -26,5 +26,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_ADMIN_PAT: ${{ secrets.REPO_ADMIN_PAT }}
           ORG_NAME: ${{ vars.ORG_NAME }}
-          GITHUB_MODEL: ${{ vars.GITHUB_MODEL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
         run: python scripts/update-repo-descriptions.py

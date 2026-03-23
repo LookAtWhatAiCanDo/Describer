@@ -21,9 +21,9 @@ from urllib.parse import urlencode
 # ---------------------------------------------------------------------------
 
 # Model used for every AI call throughout the script.
-# Override via the GITHUB_MODEL environment variable.
+# Override via the AI_MODEL environment variable.
 # See https://github.com/marketplace/models for available model IDs.
-MODEL = os.environ.get("GITHUB_MODEL", "gpt-5-mini")
+MODEL = os.environ.get("AI_MODEL", "gpt-5-mini")
 
 GITHUB_API_BASE = "https://api.github.com"
 MODELS_API_URL = "https://models.inference.ai.azure.com/chat/completions"
