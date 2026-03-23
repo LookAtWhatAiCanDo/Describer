@@ -27,10 +27,10 @@ The workflow must live in a repository that GitHub Actions can execute.
 
 ### 2. Create a Personal Access Token (PAT) with repo admin rights
 
-The `GITHUB_TOKEN` provided automatically by Actions can read repos but **cannot update another repository's description** via `PATCH /repos/{owner}/{repo}`. You need a separate PAT that has the `repo` scope (classic PAT) or `repository > metadata > write` (fine-grained PAT) for every repo whose description you want to update.
+The `GITHUB_TOKEN` provided automatically by Actions can read repos but **cannot update another repository's description** via `PATCH /repos/{owner}/{repo}`. You need a separate PAT scoped to the target org.
 
 1. Go to **GitHub → Settings → Developer settings → Personal access tokens**.
-2. Create a token with at minimum the `repo` scope (classic) or `repository metadata: read/write` (fine-grained, scoped to the target org).
+2. Create a token with at minimum the classic `repo` scope or the fine-grained `repository : content: read/write` (scoped to the target org).
 3. Copy the token value — you will only see it once.
 
 ### 3. Configure secrets and variables
